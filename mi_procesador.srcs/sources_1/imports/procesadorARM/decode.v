@@ -83,6 +83,8 @@ module decode (
                 4'b1001: ALUControl = 4'b0110; // MUL
                 4'b1110: ALUControl = 4'b0111; //Div
                 4'b1111: ALUControl = 4'b1111; //MVN
+                4'b1011: ALUControl = 4'b1011; //Para mi add de floating point 
+                4'b1010: ALUControl = 4'b1010; //Para mi mul de floating point
                 default: ALUControl = 4'bxxxx;
                 
             endcase

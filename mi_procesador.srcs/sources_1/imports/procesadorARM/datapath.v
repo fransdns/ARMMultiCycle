@@ -91,7 +91,8 @@ module datapath (
 	.a(A),
     .b(WriteData),
     .ALUControl(ALUControl),
-    .result_fp(result_fp)
+    .result_fp(result_fp),
+    .Instr(Instr)
 	);
 	
 	flopr #(64) mi_ff_fp_alu(

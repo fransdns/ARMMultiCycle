@@ -22,6 +22,7 @@ module alu(a, b, ALUControl, Result, ALUFlags);
             4'b0101: Result = b; //mov
             4'b0111: Result = a/b; //div
             4'b1111: Result = ~b; //MVN
+            default: Result = 32'b0;
         endcase
     end
     assign neg      = Result[31];

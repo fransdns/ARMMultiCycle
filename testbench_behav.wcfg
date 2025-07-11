@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="450.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="560.161 ns"></ZoomEndTime>
-      <Cursor1Time time="478.817 ns"></Cursor1Time>
+      <ZoomStartTime time="443.444 ns"></ZoomStartTime>
+      <ZoomEndTime time="597.945 ns"></ZoomEndTime>
+      <Cursor1Time time="490.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="132"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="155"></NameColumnWidth>
+      <ValueColumnWidth column_width="154"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="38" />
+   <WVObjectSize size="30" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -50,17 +50,11 @@
       <obj_property name="ElementShortName">Result[31:0]</obj_property>
       <obj_property name="ObjectShortName">Result[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi_alu/a" type="array">
-      <obj_property name="ElementShortName">a[31:0]</obj_property>
-      <obj_property name="ObjectShortName">a[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi_alu/b" type="array">
-      <obj_property name="ElementShortName">b[31:0]</obj_property>
-      <obj_property name="ObjectShortName">b[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/mi_alu/ALUControl" type="array">
       <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
       <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/dut/arm/c/dec/fsm/state" type="array">
       <obj_property name="ElementShortName">state[4:0]</obj_property>
@@ -95,18 +89,6 @@
       <obj_property name="ElementShortName">[2][31:0]</obj_property>
       <obj_property name="ObjectShortName">[2][31:0]</obj_property>
       <obj_property name="label">R2</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/rf[3]" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">[3][31:0]</obj_property>
-      <obj_property name="ObjectShortName">[3][31:0]</obj_property>
-      <obj_property name="label">R3</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/rf[4]" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">[4][31:0]</obj_property>
-      <obj_property name="ObjectShortName">[4][31:0]</obj_property>
-      <obj_property name="label">R4</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/res_total" type="array">
       <obj_property name="DisplayName">label</obj_property>
@@ -150,33 +132,17 @@
       <obj_property name="ElementShortName">s</obj_property>
       <obj_property name="ObjectShortName">s</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/MemWrite" type="logic">
-      <obj_property name="ElementShortName">MemWrite</obj_property>
-      <obj_property name="ObjectShortName">MemWrite</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/mi_alu/Result" type="array">
       <obj_property name="ElementShortName">Result[31:0]</obj_property>
       <obj_property name="ObjectShortName">Result[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/mi_fp_alu/result_fp" type="array">
-      <obj_property name="ElementShortName">result_fp[63:0]</obj_property>
-      <obj_property name="ObjectShortName">result_fp[63:0]</obj_property>
+      <obj_property name="ElementShortName">result_fp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_fp[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/mi_mux5_result/s" type="array">
       <obj_property name="ElementShortName">s[2:0]</obj_property>
       <obj_property name="ObjectShortName">s[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/c/MemWrite" type="logic">
-      <obj_property name="ElementShortName">MemWrite</obj_property>
-      <obj_property name="ObjectShortName">MemWrite</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/c/MemW" type="logic">
-      <obj_property name="ElementShortName">MemW</obj_property>
-      <obj_property name="ObjectShortName">MemW</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/c/RegWrite" type="logic">
-      <obj_property name="ElementShortName">RegWrite</obj_property>
-      <obj_property name="ObjectShortName">RegWrite</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/res_lo" type="array">
       <obj_property name="ElementShortName">res_lo[31:0]</obj_property>
@@ -190,8 +156,8 @@
       <obj_property name="ElementShortName">we4</obj_property>
       <obj_property name="ObjectShortName">we4</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/dut/Instr" type="array">
-      <obj_property name="ElementShortName">Instr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_fp_alu/ALUControl" type="array">
+      <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
    </wvobject>
 </wave_config>

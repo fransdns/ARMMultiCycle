@@ -19,8 +19,14 @@ INFO: [VRFC 10-311] analyzing module flopenr
 WARNING: [VRFC 10-1581] illegal format specifier a for monitor [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:21]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module flopr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/fp_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_add
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/fp_alu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fp_alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/fp_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module int_to_fp
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mainfsm.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mainfsm
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mem.v" into library xil_defaultlib

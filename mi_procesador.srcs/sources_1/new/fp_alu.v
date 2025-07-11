@@ -21,49 +21,61 @@
 
 
 module fp_alu(
-a,
-b,
-ALUControl,
-ALUFlags,
-result_fp,
-Result
-);
+    input wire [31:0] a,
+    input wire [31:0] b,
+    input wire [3:0] ALUControl,
+    output wire [31:0] result_fp,
+    output reg  [31:0] Result,
+    output wire [3:0]  ALUFlags,
+    input wire [31:0] Instr
+    );
 
-input wire [31:0] a;
-input wire [31:0] b;
-input wire [3:0] ALUControl;
-output wire [63:0] result_fp;
-output reg [63:0] Result;
-output wire [3:0]  ALUFlags;
-    
-    wire  neg, zero, carry, overflow;
+    wire neg, zero, carry, overflow;
     wire [31:0] condinvb;
     wire [32:0] sum;
+    wire [31:0] fp_add_result;
+    wire [31:0] fp_mul_result;
+    wire [31:0] a_fp, b_fp;
+
+    // Conversión automática de entero (two's complement) a float
+    int_to_fp convert_a (.int_val(a), .fp_val(a_fp));
+    int_to_fp convert_b (.int_val(b), .fp_val(b_fp));
+
+    // Módulos de operaciones en punto flotante
+    fp_add fp_adder (
+        .a(a_fp),
+        .b(b_fp),
+        .result(fp_add_result)
+    );
+
+    fp_mul fp_multiplier (
+        .a(a_fp),
+        .b(b_fp),
+        .result(fp_mul_result)
+    );
+
     assign condinvb = ALUControl[0] ? ~b : b;
     assign sum = a + condinvb + ALUControl[0];
-    always @(*)
-    begin
-        casex (ALUControl[3:0])
-        //se aumentó a 3 bits para soportar más funciones
-            4'b0000: Result = sum;
-            4'b0001: Result = sum;
-            4'b0010: Result = a & b;
-            4'b0011: Result = a | b;
-            4'b0100: Result = a ^ b; 
-            4'b0110: Result = a * b; // para MUL
-            4'b0101: Result = b; //mov
-            4'b0111: Result = a/b; //div
-            4'b1111: Result = ~b; //MVN
+
+    always @(*) begin
+        case (ALUControl)
+            4'b1010: Result = fp_mul_result;
+            4'B1011: Result = fp_add_result; // suma FP
+            default: Result = 32'b0;
         endcase
     end
-    
+
     assign result_fp = Result;
-    
+
+    // Flags solo válidos para operaciones enteras
+    wire is_arith = (ALUControl == 4'b0000 || ALUControl == 4'b0001);
     assign neg      = result_fp[31];
-    assign zero     = (result_fp == 32'b0);
-    assign carry    = (ALUControl[3:1] == 2'b00) & sum[32];
-    assign overflow = (ALUControl[3:1] == 2'b00) & ~(a[31] ^ b[31] ^ ALUControl[0]) & (a[31] ^ sum[31]);
+    assign zero     = (result_fp[31:0] == 32'b0);
+    assign carry    = is_arith & sum[32];
+    assign overflow = is_arith & ~(a[31] ^ b[31] ^ ALUControl[0]) & (a[31] ^ sum[31]);
+
     assign ALUFlags = {neg, zero, carry, overflow};
 
-
 endmodule
+
+

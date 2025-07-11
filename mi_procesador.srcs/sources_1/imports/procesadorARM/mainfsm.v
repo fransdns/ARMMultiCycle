@@ -64,6 +64,8 @@ module mainfsm (
 	localparam  [4:0] EXECUTE_FP = 16;
 	localparam  [4:0] FP_WB = 17 ;
 	localparam  [4:0] FP_WB2 = 18;
+	localparam  [4:0] FP_WB3 = 19;
+	//localparam  [4:0] FP_WB4 = 19;
 
 	// state register
 	always @(posedge clk or posedge reset)
@@ -81,12 +83,12 @@ module mainfsm (
 			DECODE:
 				case (Op)
 					2'b00:
-						if (Funct[5])
-							nextstate = EXECUTEI;
-						else if(opcode == 4'b1111)
-						  nextstate = EXECUTE_FP;	
-						else
-							nextstate = EXECUTER;
+                        if(opcode == 4'b1011 || opcode == 4'b1010) //CONDICIONAL PARA ENTRAR A PUNTO FLOTANTE
+                              nextstate = EXECUTE_FP;
+                        else if((Funct[5]))
+                           nextstate = EXECUTEI; 	
+                        else
+                            nextstate = EXECUTER;
 					2'b01: nextstate = MEMADR;
 					2'b10: nextstate = BRANCH;
 					2'b11: nextstate = EXECUTE_MUL; // op = 11 para ir a otro EXECUTE_MUL
@@ -109,6 +111,8 @@ module mainfsm (
 			
 			EXECUTE_FP: nextstate = FP_WB;
 			FP_WB: nextstate = FP_WB2;
+			FP_WB2: nextstate = FP_WB3;
+			//FP_WB3: nextstate = FP_WB4;
 			default: nextstate = FETCH;
 		endcase
 
@@ -133,9 +137,11 @@ module mainfsm (
 			MULWB2: controls =      15'b0_1_0_0_0_1_0_0_011_0_000;
 			MULWB3: controls =      15'b0_1_0_0_0_1_0_0_011_0_000;
 			
-			EXECUTE_FP: controls =  15'b0_0_0_0_0_0_0_0_111_0_001;
-			FP_WB: controls =       15'b0_0_0_0_0_0_0_0_111_0_001;
-			FP_WB2: controls =      15'b0_0_0_0_0_0_0_0_111_0_001;
+			EXECUTE_FP: controls =  15'b0_0_0_0_0_1_0_0_111_0_001;
+			FP_WB: controls =       15'b0_0_0_0_0_1_0_0_111_0_001;
+			FP_WB2: controls =      15'b0_0_0_0_0_1_0_0_111_0_001; //creo que esto podría ser un estado dummy
+			FP_WB3: controls =      15'b0_0_0_0_0_1_0_0_111_0_001;
+			//FP_WB4: controls =      15'b0_0_0_0_0_1_0_0_111_0_001;
 			
 			default: controls =     15'bxxxxxxxxxxxxx;
 			

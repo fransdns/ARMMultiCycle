@@ -7,13 +7,14 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 32 for port 'd' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v:45]
 WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 32 for port 'q' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v:46]
-WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'd4' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:187]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd0' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:202]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'd1' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:203]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'y' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:204]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd0' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:208]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd1' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:209]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'y' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:210]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'result_fp' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:94]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'd4' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:188]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd0' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:203]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'd1' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:204]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'y' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:205]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd0' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:209]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd1' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:210]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'y' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:211]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v" Line 1. Module arm doesn't have a timescale but at least one module in design has a timescale.
@@ -65,6 +66,9 @@ Compiling module xil_defaultlib.condlogic
 Compiling module xil_defaultlib.controller
 Compiling module xil_defaultlib.alu
 Compiling module xil_defaultlib.mult64
+Compiling module xil_defaultlib.int_to_fp
+Compiling module xil_defaultlib.fp_add
+Compiling module xil_defaultlib.fp_mul
 Compiling module xil_defaultlib.fp_alu
 Compiling module xil_defaultlib.flopr(WIDTH=64)
 Compiling module xil_defaultlib.flopr(WIDTH=32)
