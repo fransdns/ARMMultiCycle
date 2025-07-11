@@ -1,0 +1,28 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/alu.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/condcheck.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/controller.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/decode.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/extend.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" \
+"../../../../mi_procesador.srcs/sources_1/new/fp_alu.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/mainfsm.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/mem.v" \
+"../../../../mi_procesador.srcs/sources_1/new/mult64.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/mux2.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/mux3.v" \
+"../../../../mi_procesador.srcs/sources_1/new/mux4.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/regfile.v" \
+"../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/top.v" \
+"../../../../mi_procesador.srcs/sim_1/new/testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
