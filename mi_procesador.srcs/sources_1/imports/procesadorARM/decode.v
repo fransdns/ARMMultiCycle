@@ -18,12 +18,14 @@ module decode (
 	RegSrc,
 	ALUControl,
 	RegW2,
-	Instr
+	Instr,
+	opcode
 );
 	input wire clk;
 	input wire reset;
 	input wire [1:0] Op;
 	
+	input wire [3:0] opcode;
     //declaracion de instrucciones
     input wire [31:0] Instr;
 	input wire [5:0] Funct;
@@ -63,7 +65,8 @@ module decode (
 		.MemW(MemW),
 		.Branch(Branch),
 		.ALUOp(ALUOp),
-		.RegW2(RegW2)
+		.RegW2(RegW2),
+		.opcode(opcode)
 	);
 
 

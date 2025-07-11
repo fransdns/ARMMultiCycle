@@ -42,7 +42,8 @@ module arm (
 		.ResultSrc(ResultSrc),
 		.ImmSrc(ImmSrc),
 		.ALUControl(ALUControl),
-		.RegW2(RegW2)
+		.RegW2(RegW2),
+		.opcode(Instr[24:21])
 	);
 	datapath dp(
 		.clk(clk),

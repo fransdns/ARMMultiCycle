@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="326.120 ns"></ZoomStartTime>
-      <ZoomEndTime time="544.280 ns"></ZoomEndTime>
-      <Cursor1Time time="410.000 ns"></Cursor1Time>
+      <ZoomStartTime time="450.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="560.161 ns"></ZoomEndTime>
+      <Cursor1Time time="478.817 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="144"></NameColumnWidth>
+      <NameColumnWidth column_width="132"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="36" />
+   <WVObjectSize size="38" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -158,6 +158,10 @@
       <obj_property name="ElementShortName">Result[31:0]</obj_property>
       <obj_property name="ObjectShortName">Result[31:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_fp_alu/result_fp" type="array">
+      <obj_property name="ElementShortName">result_fp[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_fp[63:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/mi_mux5_result/s" type="array">
       <obj_property name="ElementShortName">s[2:0]</obj_property>
       <obj_property name="ObjectShortName">s[2:0]</obj_property>
@@ -185,5 +189,9 @@
    <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/we4" type="logic">
       <obj_property name="ElementShortName">we4</obj_property>
       <obj_property name="ObjectShortName">we4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Instr" type="array">
+      <obj_property name="ElementShortName">Instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
    </wvobject>
 </wave_config>

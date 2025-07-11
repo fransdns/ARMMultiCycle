@@ -90,6 +90,7 @@ module datapath (
 	fp_alu mi_fp_alu(
 	.a(A),
     .b(WriteData),
+    .ALUControl(ALUControl),
     .result_fp(result_fp)
 	);
 	

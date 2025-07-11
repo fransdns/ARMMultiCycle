@@ -5,15 +5,78 @@ Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 32 for port 'Instr' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/controller.v:61]
 WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 32 for port 'd' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v:45]
 WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 32 for port 'q' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v:46]
-WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'd4' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:186]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd0' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:201]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'd1' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:202]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'y' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:203]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd0' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:207]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd1' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:208]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'y' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:209]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'd4' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:187]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd0' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:202]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'd1' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:203]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'y' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:204]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd0' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:208]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'd1' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:209]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'y' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:210]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v" Line 1. Module arm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/controller.v" Line 1. Module controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/decode.v" Line 1. Module decode doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v" Line 1. Module condlogic doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v" Line 1. Module flopenr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v" Line 1. Module flopenr(WIDTH=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condcheck.v" Line 1. Module condcheck doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v" Line 1. Module datapath doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/alu.v" Line 1. Module alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=64) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/extend.v" Line 1. Module extend doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v" Line 1. Module flopenr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v" Line 1. Module flopenr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v" Line 1. Module arm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/controller.v" Line 1. Module controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/decode.v" Line 1. Module decode doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v" Line 1. Module condlogic doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v" Line 1. Module flopenr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v" Line 1. Module flopenr(WIDTH=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condcheck.v" Line 1. Module condcheck doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v" Line 1. Module datapath doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/alu.v" Line 1. Module alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=64) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/extend.v" Line 1. Module extend doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v" Line 1. Module flopenr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v" Line 1. Module flopenr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" Line 1. Module flopr(WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mainfsm
+Compiling module xil_defaultlib.decode
+Compiling module xil_defaultlib.flopenr
+Compiling module xil_defaultlib.flopenr(WIDTH=2)
+Compiling module xil_defaultlib.condcheck
+Compiling module xil_defaultlib.condlogic
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.mult64
+Compiling module xil_defaultlib.fp_alu
+Compiling module xil_defaultlib.flopr(WIDTH=64)
+Compiling module xil_defaultlib.flopr(WIDTH=32)
+Compiling module xil_defaultlib.extend
+Compiling module xil_defaultlib.mux3(WIDTH=32)
+Compiling module xil_defaultlib.mux5(WIDTH=32)
+Compiling module xil_defaultlib.mux2(WIDTH=32)
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.datapath
+Compiling module xil_defaultlib.arm
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav

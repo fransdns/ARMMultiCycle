@@ -14,7 +14,8 @@ module controller (
 	ResultSrc,
 	ImmSrc,
 	ALUControl,
-	RegW2
+	RegW2,
+	opcode
 );
 	input wire clk;
 	input wire reset;
@@ -37,6 +38,7 @@ module controller (
 	wire RegW;
 	wire MemW;
 	output wire RegW2;
+	input wire [3:0] opcode; //para floating point
 	
 	decode dec(
 		.clk(clk),
@@ -58,7 +60,7 @@ module controller (
 		.RegSrc(RegSrc),
 		.ALUControl(ALUControl),
 		.RegW2(RegW2),
-		.Instr(Instr)
+		.opcode(opcode)
 	);
 	condlogic cl(
 		.clk(clk),

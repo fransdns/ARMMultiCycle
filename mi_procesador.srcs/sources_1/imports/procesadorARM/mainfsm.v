@@ -14,12 +14,14 @@ module mainfsm (
 	Branch,
 	ALUOp,
 	IsSignedMult,
-	RegW2
+	RegW2,
+	opcode
 );
 	input wire clk;
 	input wire reset;
 	input wire [1:0] Op;
 	input wire [5:0] Funct;
+	input wire [3:0] opcode;
 	output wire IRWrite;
 	output wire AdrSrc;
 	output wire  ALUSrcA;
@@ -81,6 +83,8 @@ module mainfsm (
 					2'b00:
 						if (Funct[5])
 							nextstate = EXECUTEI;
+						else if(opcode == 4'b1111)
+						  nextstate = EXECUTE_FP;	
 						else
 							nextstate = EXECUTER;
 					2'b01: nextstate = MEMADR;
@@ -102,6 +106,9 @@ module mainfsm (
 			BRANCH: nextstate = FETCH; 
 			MULWB: nextstate = MULWB2;
 			MULWB2: nextstate = MULWB3;
+			
+			EXECUTE_FP: nextstate = FP_WB;
+			FP_WB: nextstate = FP_WB2;
 			default: nextstate = FETCH;
 		endcase
 
@@ -125,6 +132,11 @@ module mainfsm (
 			MULWB: controls =       15'b0_1_0_0_0_1_0_0_011_0_000;//     mi regW está en 1 en ambos.
 			MULWB2: controls =      15'b0_1_0_0_0_1_0_0_011_0_000;
 			MULWB3: controls =      15'b0_1_0_0_0_1_0_0_011_0_000;
+			
+			EXECUTE_FP: controls =  15'b0_0_0_0_0_0_0_0_111_0_001;
+			FP_WB: controls =       15'b0_0_0_0_0_0_0_0_111_0_001;
+			FP_WB2: controls =      15'b0_0_0_0_0_0_0_0_111_0_001;
+			
 			default: controls =     15'bxxxxxxxxxxxxx;
 			
 			/*
