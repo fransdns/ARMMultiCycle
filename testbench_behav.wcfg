@@ -11,15 +11,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="443.444 ns"></ZoomStartTime>
-      <ZoomEndTime time="597.945 ns"></ZoomEndTime>
-      <Cursor1Time time="490.000 ns"></Cursor1Time>
+      <ZoomStartTime time="480.250 ns"></ZoomStartTime>
+      <ZoomEndTime time="758.251 ns"></ZoomEndTime>
+      <Cursor1Time time="752.695 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="155"></NameColumnWidth>
-      <ValueColumnWidth column_width="154"></ValueColumnWidth>
+      <NameColumnWidth column_width="153"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="30" />
+   <WVObjectSize size="52" />
+   <wave_markers>
+      <marker time="33600" label="" />
+   </wave_markers>
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -90,27 +93,27 @@
       <obj_property name="ObjectShortName">[2][31:0]</obj_property>
       <obj_property name="label">R2</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/res_total" type="array">
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/rf[3]" type="array">
+      <obj_property name="ElementShortName">[3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/rf[4]" type="array">
+      <obj_property name="ElementShortName">[4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[4][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/rf[5]" type="array">
+      <obj_property name="ElementShortName">[5][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[5][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/rf[6]" type="array">
+      <obj_property name="ElementShortName">[6][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/rf[10]" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">res_total[63:0]</obj_property>
-      <obj_property name="ObjectShortName">res_total[63:0]</obj_property>
-      <obj_property name="label">total64bits</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/signo" type="logic">
-      <obj_property name="ElementShortName">signo</obj_property>
-      <obj_property name="ObjectShortName">signo</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/a" type="array">
-      <obj_property name="ElementShortName">a[31:0]</obj_property>
-      <obj_property name="ObjectShortName">a[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/b" type="array">
-      <obj_property name="ElementShortName">b[31:0]</obj_property>
-      <obj_property name="ObjectShortName">b[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/ALUSrcA" type="logic">
-      <obj_property name="ElementShortName">ALUSrcA</obj_property>
-      <obj_property name="ObjectShortName">ALUSrcA</obj_property>
+      <obj_property name="ElementShortName">[10][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+      <obj_property name="label">R10</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/dut/arm/ALUSrcB" type="array">
       <obj_property name="ElementShortName">ALUSrcB[1:0]</obj_property>
@@ -119,18 +122,12 @@
    <wvobject fp_name="/testbench/dut/arm/ResultSrc" type="array">
       <obj_property name="ElementShortName">ResultSrc[2:0]</obj_property>
       <obj_property name="ObjectShortName">ResultSrc[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/RegWrite" type="logic">
-      <obj_property name="ElementShortName">RegWrite</obj_property>
-      <obj_property name="ObjectShortName">RegWrite</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/SrcA" type="array">
       <obj_property name="ElementShortName">SrcA[31:0]</obj_property>
       <obj_property name="ObjectShortName">SrcA[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi2_mux2_srcA/s" type="logic">
-      <obj_property name="ElementShortName">s</obj_property>
-      <obj_property name="ObjectShortName">s</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/mi_alu/Result" type="array">
       <obj_property name="ElementShortName">Result[31:0]</obj_property>
@@ -140,10 +137,6 @@
       <obj_property name="ElementShortName">result_fp[31:0]</obj_property>
       <obj_property name="ObjectShortName">result_fp[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi_mux5_result/s" type="array">
-      <obj_property name="ElementShortName">s[2:0]</obj_property>
-      <obj_property name="ObjectShortName">s[2:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/res_lo" type="array">
       <obj_property name="ElementShortName">res_lo[31:0]</obj_property>
       <obj_property name="ObjectShortName">res_lo[31:0]</obj_property>
@@ -152,12 +145,129 @@
       <obj_property name="ElementShortName">res_hi[31:0]</obj_property>
       <obj_property name="ObjectShortName">res_hi[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/we4" type="logic">
-      <obj_property name="ElementShortName">we4</obj_property>
-      <obj_property name="ObjectShortName">we4</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/dut/arm/dp/mi_fp_alu/ALUControl" type="array">
       <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
       <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mult_lo" type="array">
+      <obj_property name="ElementShortName">mult_lo[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_lo[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mult_hi" type="array">
+      <obj_property name="ElementShortName">mult_hi[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_hi[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mult_lo_ff" type="array">
+      <obj_property name="ElementShortName">mult_lo_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_lo_ff[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mult_hi_ff" type="array">
+      <obj_property name="ElementShortName">mult_hi_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_hi_ff[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/res_total" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">res_total[63:0]</obj_property>
+      <obj_property name="ObjectShortName">res_total[63:0]</obj_property>
+      <obj_property name="label">total64bits</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/a" type="array">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/a_signed_ext" type="array">
+      <obj_property name="ElementShortName">a_signed_ext[63:0]</obj_property>
+      <obj_property name="ObjectShortName">a_signed_ext[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/b_signed_ext" type="array">
+      <obj_property name="ElementShortName">b_signed_ext[63:0]</obj_property>
+      <obj_property name="ObjectShortName">b_signed_ext[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_mult64/result_signed" type="array">
+      <obj_property name="ElementShortName">result_signed[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_signed[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/rf[7]" type="array">
+      <obj_property name="ElementShortName">[7][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[7][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_regfile/rf[8]" type="array">
+      <obj_property name="ElementShortName">[8][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[8][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/c/ALUFlags" type="array">
+      <obj_property name="ElementShortName">ALUFlags[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUFlags[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/Instr" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="label">Instrucciones</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/c/cl/Flags" type="array">
+      <obj_property name="ElementShortName">Flags[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Flags[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/c/cl/CondEx" type="logic">
+      <obj_property name="ElementShortName">CondEx</obj_property>
+      <obj_property name="ObjectShortName">CondEx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/c/dec/S" type="logic">
+      <obj_property name="ElementShortName">S</obj_property>
+      <obj_property name="ObjectShortName">S</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/c/dec/FlagW" type="array">
+      <obj_property name="ElementShortName">FlagW[1:0]</obj_property>
+      <obj_property name="ObjectShortName">FlagW[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/c/cl/FlagWrite" type="array">
+      <obj_property name="ElementShortName">FlagWrite[1:0]</obj_property>
+      <obj_property name="ObjectShortName">FlagWrite[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_flags_selector/flags_fp" type="array">
+      <obj_property name="ElementShortName">flags_fp[3:0]</obj_property>
+      <obj_property name="ObjectShortName">flags_fp[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_flags_selector/flags_alu" type="array">
+      <obj_property name="ElementShortName">flags_alu[3:0]</obj_property>
+      <obj_property name="ObjectShortName">flags_alu[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_flags_selector/flags_muls" type="array">
+      <obj_property name="ElementShortName">flags_muls[3:0]</obj_property>
+      <obj_property name="ObjectShortName">flags_muls[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_flags_selector/Instr" type="array">
+      <obj_property name="ElementShortName">Instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_flags_selector/ALUFlags" type="array">
+      <obj_property name="ElementShortName">ALUFlags[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUFlags[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_flags_selector/flags_result" type="array">
+      <obj_property name="ElementShortName">flags_result[3:0]</obj_property>
+      <obj_property name="ObjectShortName">flags_result[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/arm/dp/mi_flags_selector/S" type="logic">
+      <obj_property name="ElementShortName">S</obj_property>
+      <obj_property name="ObjectShortName">S</obj_property>
    </wvobject>
 </wave_config>

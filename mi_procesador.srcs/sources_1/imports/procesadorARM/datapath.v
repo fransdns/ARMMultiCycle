@@ -69,14 +69,24 @@ module datapath (
 	output wire[31:0] mult_hi_ff;
 	
 
-    
+     wire[3:0] flags_alu;
+     wire[3:0] flags_fp;
+     wire[3:0] flags_muls; 
 	
 	alu mi_alu(
 	.a(SrcA),
 	.b(SrcB),
 	.ALUControl(ALUControl),
 	.Result(ALUResult),
-	.ALUFlags(ALUFlags)
+	.ALUFlags(flags_alu)
+	);
+	
+	flags_selector mi_flags_selector(
+	.flags_alu(flags_alu),
+	.flags_fp(flags_fp),
+	.flags_muls(flags_muls),
+	.ALUFlags(ALUFlags),
+	.Instr(Instr)
 	);
 	
 	mult64 mi_mult64 (
@@ -84,7 +94,8 @@ module datapath (
     .b(WriteData),
     .signo(Instr[24]),
     .res_lo(mult_lo), //debo de pasar esto a un FF
-    .res_hi(mult_hi)  //debo de pasar esto a un FF
+    .res_hi(mult_hi),  //debo de pasar esto a un FF
+    .ALUFlags(flags_muls)
 	);
 	
 	fp_alu mi_fp_alu(
@@ -92,7 +103,8 @@ module datapath (
     .b(WriteData),
     .ALUControl(ALUControl),
     .result_fp(result_fp),
-    .Instr(Instr)
+    .Instr(Instr),
+    .ALUFlags(flags_fp)
 	);
 	
 	flopr #(64) mi_ff_fp_alu(

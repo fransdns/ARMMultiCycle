@@ -48,7 +48,8 @@ module decode (
 	wire ALUOp;
 	
 	output wire RegW2;
-
+    wire S = Instr[20]; 
+    
 	// Main FSM
 	mainfsm fsm(
 		.clk(clk),
@@ -71,6 +72,9 @@ module decode (
 
 
 	 always @(*) begin
+	     ALUControl = 4'b0000;
+        FlagW = 2'b00;
+
         if (ALUOp) begin
         $display("Funct: %b, ALUControl: %b", Funct, ALUControl);
             case (Funct[4:1])
@@ -88,11 +92,11 @@ module decode (
                 default: ALUControl = 4'bxxxx;
                 
             endcase
-            FlagW[1] = Funct[0];
-            FlagW[0] = Funct[0] & ((ALUControl == 3'b000) | (ALUControl == 3'b001));
+            FlagW[1] = S;
+            FlagW[0] = S & ((ALUControl == 4'b0000) | (ALUControl == 4'b0001));
         end
         else begin
-            ALUControl = 3'b000;
+            ALUControl = 4'b0000;
             FlagW = 2'b00;
         end
     end

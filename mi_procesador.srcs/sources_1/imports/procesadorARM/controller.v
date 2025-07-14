@@ -19,7 +19,7 @@ module controller (
 );
 	input wire clk;
 	input wire reset;
-	input wire [31:12] Instr;
+	input wire [31:0] Instr;
 	input wire [3:0] ALUFlags;
 	output wire PCWrite;
 	output wire MemWrite;
@@ -60,7 +60,8 @@ module controller (
 		.RegSrc(RegSrc),
 		.ALUControl(ALUControl),
 		.RegW2(RegW2),
-		.opcode(opcode)
+		.opcode(opcode),
+		.Instr(Instr)
 	);
 	condlogic cl(
 		.clk(clk),

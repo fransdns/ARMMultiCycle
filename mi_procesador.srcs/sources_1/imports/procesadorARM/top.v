@@ -13,6 +13,7 @@ module top (
 	wire [31:0] PC;
 	wire [31:0] Instr;
 	wire [31:0] ReadData;
+	wire [31:0] res_hi;
 	// instantiate processor and shared memory
 	arm arm(
 		.clk(clk),
@@ -29,4 +30,12 @@ module top (
 		.wd(WriteData),
 		.rd(ReadData)
 	);
+	
+	hex_display display_unit (
+        .clk(clk),
+        .reset(reset),
+        .data(res_hi[31:16]),
+        .anode(anode),
+        .catode(catode)
+    );
 endmodule

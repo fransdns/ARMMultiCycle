@@ -83,7 +83,7 @@ module mainfsm (
 			DECODE:
 				case (Op)
 					2'b00:
-                        if(opcode == 4'b1011 || opcode == 4'b1010) //CONDICIONAL PARA ENTRAR A PUNTO FLOTANTE
+                        if(opcode == 4'b1011 || opcode == 4'b1110) //CONDICIONAL PARA ENTRAR A PUNTO FLOTANTE
                               nextstate = EXECUTE_FP;
                         else if((Funct[5]))
                            nextstate = EXECUTEI; 	
@@ -125,7 +125,8 @@ module mainfsm (
 			DECODE: controls =      15'b0_0_0_0_0_0_0_0_010_1_100;
 			EXECUTER: controls =    15'b0_0_0_0_0_0_0_0_000_0_001;
 			EXECUTEI: controls =    15'b0_0_0_0_0_0_0_0_000_0_011;
-			BRANCH: controls =      15'b0_0_0_1_0_0_0_0_010_0_010;
+			//BRANCH: controls =      15'b0_0_0_1_0_0_0_0_010_0_010;
+			BRANCH: controls =      15'b0_0_0_0_0_0_0_0_000_1_010;
 			MEMADR: controls =      15'b0_0_0_0_0_0_0_0_000_0_010;
 			MEMRD: controls =       15'b0_0_0_0_0_0_0_1_000_0_000;
 			MEMWR: controls =       15'b0_0_0_0_1_0_0_1_000_0_000;

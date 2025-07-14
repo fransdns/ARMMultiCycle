@@ -1,0 +1,681 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Jul 12 18:17:34 2025
+# Process ID         : 14116
+# Current directory  : C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.runs/synth_1
+# Command line       : vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file           : C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.runs/synth_1/top.vds
+# Journal file       : C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.runs/synth_1\vivado.jou
+# Running On         : machine
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : AMD Ryzen 5 5500U with Radeon Graphics         
+# CPU Frequency      : 2096 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 7879 MB
+# Swap memory        : 7879 MB
+# Total Virtual      : 15759 MB
+# Available Virtual  : 4752 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 224
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 977.992 ; gain = 466.102
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-2135] illegal format specifier a for monitor [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:21]
+WARNING: [Synth 8-2135] illegal format specifier a for monitor [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mux2.v:14]
+INFO: [Synth 8-11241] undeclared symbol 'anode', assumed default net type 'wire' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/top.v:38]
+INFO: [Synth 8-11241] undeclared symbol 'catode', assumed default net type 'wire' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/top.v:39]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'arm' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:1]
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'decode' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/decode.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mainfsm' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mainfsm.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mainfsm.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'mainfsm' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mainfsm.v:1]
+WARNING: [Synth 8-7071] port 'IsSignedMult' of module 'mainfsm' is unconnected for instance 'fsm' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/decode.v:53]
+WARNING: [Synth 8-7023] instance 'fsm' of module 'mainfsm' has 17 connections declared, but only 16 given [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/decode.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'decode' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/decode.v:1]
+WARNING: [Synth 8-7071] port 'Instr' of module 'decode' is unconnected for instance 'dec' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/controller.v:43]
+WARNING: [Synth 8-7023] instance 'dec' of module 'decode' has 21 connections declared, but only 20 given [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/controller.v:43]
+INFO: [Synth 8-6157] synthesizing module 'condlogic' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v:1]
+INFO: [Synth 8-6157] synthesizing module 'flopenr' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:1]
+WARNING: [Synth 8-11581] system task call 'monitor' not supported [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopenr' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:1]
+WARNING: [Synth 8-689] width (2) of port connection 'd' does not match port width (32) of module 'flopenr' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v:45]
+WARNING: [Synth 8-689] width (2) of port connection 'q' does not match port width (32) of module 'flopenr' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v:46]
+INFO: [Synth 8-6157] synthesizing module 'flopenr__parameterized0' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:1]
+	Parameter WIDTH bound to: 2 - type: integer 
+WARNING: [Synth 8-11581] system task call 'monitor' not supported [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopenr__parameterized0' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:1]
+INFO: [Synth 8-6157] synthesizing module 'condcheck' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condcheck.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'condcheck' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condcheck.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'condlogic' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/condlogic.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'datapath' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mult64' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/mult64.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'mult64' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/mult64.v:22]
+WARNING: [Synth 8-7071] port 'res_total' of module 'mult64' is unconnected for instance 'mi_mult64' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:82]
+WARNING: [Synth 8-7023] instance 'mi_mult64' of module 'mult64' has 6 connections declared, but only 5 given [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:82]
+INFO: [Synth 8-6157] synthesizing module 'fp_alu' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/fp_alu.v:23]
+INFO: [Synth 8-6157] synthesizing module 'int_to_fp' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v:24]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v:51]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v:51]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v:51]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v:51]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v:51]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v:51]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v:51]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'int_to_fp' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/int_to_fp.v:24]
+INFO: [Synth 8-6157] synthesizing module 'fp_add' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/fp_add.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'fp_add' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/fp_add.v:26]
+INFO: [Synth 8-6157] synthesizing module 'fp_mul' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/fp_mul.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'fp_mul' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/fp_mul.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'fp_alu' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/fp_alu.v:23]
+WARNING: [Synth 8-689] width (64) of port connection 'result_fp' does not match port width (32) of module 'fp_alu' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:94]
+WARNING: [Synth 8-7071] port 'Result' of module 'fp_alu' is unconnected for instance 'mi_fp_alu' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:90]
+WARNING: [Synth 8-7071] port 'ALUFlags' of module 'fp_alu' is unconnected for instance 'mi_fp_alu' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:90]
+WARNING: [Synth 8-7023] instance 'mi_fp_alu' of module 'fp_alu' has 7 connections declared, but only 5 given [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:90]
+INFO: [Synth 8-6157] synthesizing module 'flopr' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v:1]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopr' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v:1]
+INFO: [Synth 8-6157] synthesizing module 'flopr__parameterized0' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopr__parameterized0' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v:1]
+INFO: [Synth 8-6157] synthesizing module 'extend' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/extend.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/extend.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'extend' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'flopenr__parameterized1' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+WARNING: [Synth 8-11581] system task call 'monitor' not supported [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopenr__parameterized1' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux3' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mux3.v:8]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux3' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mux3.v:8]
+INFO: [Synth 8-6157] synthesizing module 'mux5' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/mux4.v:23]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux5' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/mux4.v:23]
+WARNING: [Synth 8-689] width (64) of port connection 'd4' does not match port width (32) of module 'mux5' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:188]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mux2.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+WARNING: [Synth 8-11581] system task call 'monitor' not supported [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mux2.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mux2.v:1]
+WARNING: [Synth 8-689] width (4) of port connection 'd0' does not match port width (32) of module 'mux2' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:203]
+WARNING: [Synth 8-689] width (1) of port connection 'd1' does not match port width (32) of module 'mux2' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:204]
+WARNING: [Synth 8-689] width (4) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:205]
+WARNING: [Synth 8-689] width (4) of port connection 'd0' does not match port width (32) of module 'mux2' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:209]
+WARNING: [Synth 8-689] width (4) of port connection 'd1' does not match port width (32) of module 'mux2' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:210]
+WARNING: [Synth 8-689] width (4) of port connection 'y' does not match port width (32) of module 'mux2' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:211]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/regfile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/regfile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'datapath' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:1]
+WARNING: [Synth 8-7071] port 'IsSignedMult' of module 'datapath' is unconnected for instance 'dp' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:48]
+WARNING: [Synth 8-7071] port 'MuxResult' of module 'datapath' is unconnected for instance 'dp' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:48]
+WARNING: [Synth 8-7071] port 'mult_lo' of module 'datapath' is unconnected for instance 'dp' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:48]
+WARNING: [Synth 8-7071] port 'mult_hi' of module 'datapath' is unconnected for instance 'dp' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:48]
+WARNING: [Synth 8-7071] port 'mult_hi_ff' of module 'datapath' is unconnected for instance 'dp' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:48]
+WARNING: [Synth 8-7071] port 'mult_lo_ff' of module 'datapath' is unconnected for instance 'dp' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:48]
+WARNING: [Synth 8-7071] port 'result_fp' of module 'datapath' is unconnected for instance 'dp' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:48]
+WARNING: [Synth 8-7071] port 'result_fp_ff' of module 'datapath' is unconnected for instance 'dp' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:48]
+WARNING: [Synth 8-7023] instance 'dp' of module 'datapath' has 26 connections declared, but only 18 given [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'arm' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/arm.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mem' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mem.v:1]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'memfile3.dat'; please make sure the file is added to project and has read permission, ignoring [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mem.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'mem' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/mem.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hex_display' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/hex_display.v:91]
+INFO: [Synth 8-6157] synthesizing module 'CLKdivider' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/hex_display.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'CLKdivider' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/hex_display.v:50]
+INFO: [Synth 8-6157] synthesizing module 'hFSM' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/hex_display.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'hFSM' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/hex_display.v:65]
+INFO: [Synth 8-6157] synthesizing module 'HexTo7Segment' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/hex_display.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/hex_display.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'HexTo7Segment' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/hex_display.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hex_display' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/hex_display.v:91]
+WARNING: [Synth 8-689] width (1) of port connection 'anode' does not match port width (4) of module 'hex_display' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/top.v:38]
+WARNING: [Synth 8-689] width (1) of port connection 'catode' does not match port width (8) of module 'hex_display' [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/top.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/top.v:1]
+WARNING: [Synth 8-3936] Found unconnected internal register 'frac_mult_reg' and it is trimmed from '48' to '46' bits. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/new/fp_mul.v:41]
+WARNING: [Synth 8-4767] Trying to implement RAM 'rf_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "rf_reg" dissolved into registers
+WARNING: [Synth 8-3848] Net IsSignedMult in module/entity datapath does not have driver. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:65]
+WARNING: [Synth 8-3848] Net MuxResult in module/entity datapath does not have driver. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v:63]
+WARNING: [Synth 8-3848] Net res_hi in module/entity top does not have driver. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/sources_1/imports/procesadorARM/top.v:16]
+WARNING: [Synth 8-7129] Port a[31] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[30] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[29] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[28] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[27] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[26] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[25] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[24] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[23] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[22] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[21] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[20] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[19] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[18] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[17] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[16] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[15] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[14] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[13] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[12] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[11] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[10] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[9] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[8] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[31] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[30] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[29] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[28] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[27] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[26] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[25] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[24] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[23] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[22] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[21] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[20] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[19] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[18] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[17] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[16] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[15] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[14] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[13] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[12] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[11] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[10] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[9] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[8] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[7] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[6] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[5] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[4] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[3] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[2] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[1] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[0] in module fp_alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IsSignedMult in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[31] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[30] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[29] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[28] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[27] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[26] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[25] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[24] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[23] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[22] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[21] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[20] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[19] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[18] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[17] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[16] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[15] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[14] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[13] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[12] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[11] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[10] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[9] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[8] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[7] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[6] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[5] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[4] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[3] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[2] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[1] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MuxResult[0] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Funct[4] in module mainfsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Funct[3] in module mainfsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Funct[2] in module mainfsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Funct[1] in module mainfsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[31] in module decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[30] in module decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[29] in module decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[28] in module decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[24] in module decode is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1091.703 ; gain = 579.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1091.703 ; gain = 579.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1091.703 ; gain = 579.812
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1091.703 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc]
+WARNING: [Vivado 12-584] No ports matched 'catode[7]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'catode[6]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'catode[5]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'catode[4]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'catode[3]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'catode[2]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'catode[1]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'catode[0]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'catode[*]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'catode[*]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'catode[*]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'anode[0]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'anode[1]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'anode[2]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'anode[3]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'anode[*]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'anode[*]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'anode[*]'. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.srcs/constrs_1/new/constraints_margiory.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1181.750 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1181.750 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1181.750 ; gain = 669.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1181.750 ; gain = 669.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1181.750 ; gain = 669.859
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mainfsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   FETCH |                            00000 |                            00000
+                  DECODE |                            00001 |                            00001
+              EXECUTE_FP |                            00010 |                            10000
+                   FP_WB |                            00011 |                            10001
+                  FP_WB2 |                            00100 |                            10010
+                 iSTATE0 |                            00101 |                            10011
+                EXECUTEI |                            00110 |                            00111
+                EXECUTER |                            00111 |                            00110
+                 iSTATE1 |                            01000 |                            01000
+                  MEMADR |                            01001 |                            00010
+                   MEMRD |                            01010 |                            00011
+                 iSTATE3 |                            01011 |                            00100
+                 iSTATE2 |                            01100 |                            00101
+                  BRANCH |                            01101 |                            01001
+             EXECUTE_MUL |                            01110 |                            01011
+                   MULWB |                            01111 |                            01100
+                  MULWB2 |                            10000 |                            01101
+                  iSTATE |                            10001 |                            01110
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mainfsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1181.750 ; gain = 669.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   3 Input   33 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input   25 Bit       Adders := 1     
+	   3 Input    8 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 3     
+	   3 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 25    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input  480 Bit        Muxes := 1     
+	   2 Input   46 Bit        Muxes := 1     
+	   2 Input   34 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 45    
+	   4 Input   32 Bit        Muxes := 2     
+	   2 Input   24 Bit        Muxes := 2     
+	   2 Input   23 Bit        Muxes := 1     
+	  19 Input   15 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	  14 Input    5 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 62    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 40 (col length:40)
+BRAMs: 40 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP Result0, operation Mode is: A*B.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: Generating DSP Result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: Generating DSP Result0, operation Mode is: A*B.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: Generating DSP Result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: Generating DSP dp/mi_fp_alu/fp_multiplier/exp_result1, operation Mode is: A*B.
+DSP Report: operator dp/mi_fp_alu/fp_multiplier/exp_result1 is absorbed into DSP dp/mi_fp_alu/fp_multiplier/exp_result1.
+DSP Report: operator dp/mi_fp_alu/fp_multiplier/exp_result1 is absorbed into DSP dp/mi_fp_alu/fp_multiplier/exp_result1.
+DSP Report: Generating DSP dp/mi_fp_alu/fp_multiplier/exp_result1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator dp/mi_fp_alu/fp_multiplier/exp_result1 is absorbed into DSP dp/mi_fp_alu/fp_multiplier/exp_result1.
+DSP Report: operator dp/mi_fp_alu/fp_multiplier/exp_result1 is absorbed into DSP dp/mi_fp_alu/fp_multiplier/exp_result1.
+DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1315.875 ; gain = 803.984
+---------------------------------------------------------------------------------
+ Sort Area is  Result0_0 : 0 0 : 3101 5879 : Used 1 time 0
+ Sort Area is  Result0_0 : 0 1 : 2778 5879 : Used 1 time 0
+ Sort Area is  p_1_out_9 : 0 0 : 3101 5654 : Used 1 time 0
+ Sort Area is  p_1_out_9 : 0 1 : 2553 5654 : Used 1 time 0
+ Sort Area is  Result0_3 : 0 0 : 2759 5418 : Used 1 time 0
+ Sort Area is  Result0_3 : 0 1 : 2659 5418 : Used 1 time 0
+ Sort Area is  p_1_out_b : 0 0 : 2549 4902 : Used 1 time 0
+ Sort Area is  p_1_out_b : 0 1 : 2353 4902 : Used 1 time 0
+ Sort Area is  dp/mi_fp_alu/fp_multiplier/exp_result1_6 : 0 0 : 3446 4760 : Used 1 time 0
+ Sort Area is  dp/mi_fp_alu/fp_multiplier/exp_result1_6 : 0 1 : 1314 4760 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-------------+-----------+----------------------+----------------+
+|Module Name | RTL Object  | Inference | Size (Depth x Width) | Primitives     | 
++------------+-------------+-----------+----------------------+----------------+
+|top         | mem/RAM_reg | Implied   | 64 x 32              | RAM64X1S x 32  | 
++------------+-------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|alu         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|alu         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|alu         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|alu         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_mul      | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_mul      | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult64      | A*B            | 18     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult64      | (PCIN>>17)+A*B | 17     | 17     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult64      | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult64      | (PCIN>>17)+A*B | 18     | 17     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1341.863 ; gain = 829.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 1496.242 ; gain = 984.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+-------------+-----------+----------------------+----------------+
+|Module Name | RTL Object  | Inference | Size (Depth x Width) | Primitives     | 
++------------+-------------+-----------+----------------------+----------------+
+|top         | mem/RAM_reg | Implied   | 64 x 32              | RAM64X1S x 32  | 
++------------+-------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1526.289 ; gain = 1014.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 1597.918 ; gain = 1086.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 1597.918 ; gain = 1086.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 1597.918 ; gain = 1086.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 1597.918 ; gain = 1086.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 1597.918 ; gain = 1086.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 1597.918 ; gain = 1086.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mult64      | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult64      | PCIN>>17+A*B | 30     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult64      | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult64      | PCIN>>17+A*B | 17     | 18     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|alu         | A*B          | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|alu         | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|alu         | PCIN>>17+A*B | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_mul      | A*B          | 24     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_mul      | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   343|
+|3     |DSP48E1  |     9|
+|4     |LUT1     |    65|
+|5     |LUT2     |   160|
+|6     |LUT3     |  1037|
+|7     |LUT4     |   113|
+|8     |LUT5     |   279|
+|9     |LUT6     |  1690|
+|10    |MUXF7    |   169|
+|11    |MUXF8    |    64|
+|12    |RAM64X1S |    32|
+|13    |FDCE     |   297|
+|14    |FDRE     |   480|
+|15    |IBUF     |     2|
+|16    |OBUF     |    65|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 1597.918 ; gain = 1086.027
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:11 . Memory (MB): peak = 1597.918 ; gain = 995.980
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:14 . Memory (MB): peak = 1597.918 ; gain = 1086.027
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1607.070 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 617 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1610.773 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM64X1S => RAM64X1S (RAMS64E): 32 instances
+
+Synth Design complete | Checksum: e303120f
+INFO: [Common 17-83] Releasing license: Synthesis
+87 Infos, 168 Warnings, 19 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:20 . Memory (MB): peak = 1610.773 ; gain = 1279.988
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1610.773 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/frans/vivado_proyectos/mi_procesador/mi_procesador.runs/synth_1/top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 12 18:18:58 2025...

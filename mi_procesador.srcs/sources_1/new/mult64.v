@@ -25,23 +25,32 @@ module mult64(
     input wire signo, // 1: signed (SMULL), 0: unsigned (UMULL)
     output wire [31:0] res_lo,
     output wire [31:0] res_hi,
-    output wire [63:0] res_total
+    output wire [63:0] res_total,
+    output wire [3:0]  ALUFlags
 );
 
-    // Operandos extendidos a 64 bits con signo o sin signo
+    // Extensión con o sin signo
     wire signed [63:0] a_signed_ext = {{32{a[31]}}, a};
     wire signed [63:0] b_signed_ext = {{32{b[31]}}, b};
 
     wire [63:0] a_unsigned_ext = {32'b0, a};
     wire [63:0] b_unsigned_ext = {32'b0, b};
 
-    // Resultado condicional según signo
-    wire [63:0] result_total = signo ? (a_signed_ext * b_signed_ext) : (a_unsigned_ext * b_unsigned_ext);
+    // Resultado de multiplicación signed o unsigned
+    wire signed [63:0] result_signed = a_signed_ext * b_signed_ext;
+    wire [63:0] result_unsigned = a_unsigned_ext * b_unsigned_ext;
 
-    // Asignaciones finales
-    assign res_total = result_total;
-    assign res_lo = result_total[31:0];
-    assign res_hi = result_total[63:32];
+    // Asignación final según el modo
+    assign res_total = signo ? result_signed : result_unsigned;
+    assign res_lo = res_total[31:0];
+    assign res_hi = res_total[63:32];
+    
+    // Flags: N = bit más significativo de res_hi, Z = si res_total == 0
+    wire N_flag = res_hi[31];
+    wire Z_flag = (res_total == 64'b0);
+    wire C_flag = 1'b0; // no definido en multiplicaciones
+    wire V_flag = 1'b0; // no definido en multiplicaciones
+
+    assign ALUFlags = {N_flag, Z_flag, C_flag, V_flag};
 
 endmodule
-

@@ -8,11 +8,13 @@ verilog xil_defaultlib  \
 "../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/datapath.v" \
 "../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/decode.v" \
 "../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/extend.v" \
+"../../../../mi_procesador.srcs/sources_1/new/flags_selector.v" \
 "../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/flopenr.v" \
 "../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/flopr.v" \
 "../../../../mi_procesador.srcs/sources_1/new/fp_add.v" \
 "../../../../mi_procesador.srcs/sources_1/new/fp_alu.v" \
 "../../../../mi_procesador.srcs/sources_1/new/fp_mul.v" \
+"../../../../mi_procesador.srcs/sources_1/new/hex_display.v" \
 "../../../../mi_procesador.srcs/sources_1/new/int_to_fp.v" \
 "../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/mainfsm.v" \
 "../../../../mi_procesador.srcs/sources_1/imports/procesadorARM/mem.v" \

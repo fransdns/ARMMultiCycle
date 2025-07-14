@@ -59,7 +59,7 @@ module fp_alu(
 
     always @(*) begin
         case (ALUControl)
-            4'b1010: Result = fp_mul_result;
+            4'b1110: Result = fp_mul_result;
             4'B1011: Result = fp_add_result; // suma FP
             default: Result = 32'b0;
         endcase
