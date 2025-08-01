@@ -45,11 +45,7 @@ else if(Instr[24:21] == 4'b1110 || Instr[24:21] == 4'b1011) //Instr[27:26] == 2'
     flags_result = flags_fp;    
 else 
     flags_result = flags_alu;
-
 end
-//cuando asigno mis flags usando esas condicionales, realmente son las correctas ? 
-//ahorita estoy analizando la instrucción CMP. Esa en cuál de las 3 entra ? 
-
 assign ALUFlags = S ?  flags_result :  4'b0000 ;
     
 endmodule
